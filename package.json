@@ -17,11 +17,11 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "~1.8.2",
-    "electron-packager": "^11.0.1"
+    "electron": "^1.8.8",
+    "electron-packager": "^11.2.1"
   },
   "dependencies": {
-    "asar": "^0.14.2",
+    "asar": "^0.14.6",
     "screenres": "^2.0.1"
   }
 }
