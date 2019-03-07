@@ -6,14 +6,20 @@ const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
+const sr = require('screenres')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
-
+let res = sr.get();
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({
+    width: res[0]+30, height: res[1]+30,
+    type: 'desktop',
+    frame: false,
+    enableLargerThanScreen: true,
+  })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -21,6 +27,8 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }))
+
+  mainWindow.setPosition(-15,-15)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "VideoWallpaper",
+  "version": "0.0.1",
+  "description": "A minimal Video Wallpaper App for mac",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -17,6 +17,11 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "~1.8.2"
+    "electron": "~1.8.2",
+    "electron-packager": "^11.0.1"
+  },
+  "dependencies": {
+    "asar": "^0.14.2",
+    "screenres": "^2.0.1"
   }
 }
